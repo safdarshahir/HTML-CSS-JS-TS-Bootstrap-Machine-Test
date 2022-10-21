@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/login.css">
+        <script src="../js/bootstrap/bootstrap.bundle.js"></script>
+        
+        <script type="text/javascript">
+
+            function preventBack() {
+                window.history.forward(); 
+            }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () { null };
+        </script>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Travel Requestor</h1>
+            <div class="d-flex">
+                <div>
+                    <h2>Welcome Back</h2>
+                    <h6>Sign in to your account below.</h6>
+
+                    <form method=get action="./employye-page.html">
+                        
+                        <div class="form-group">
+                            <div><label for="username">Username</label></div>
+                            <input type="text" name="username" id="username">
+                        </div>
+                     
+                        <div class="form-group">
+                            <div>   <label for="password">Password</label></div>
+                            <input type="password" name="password" id="password">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+            
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

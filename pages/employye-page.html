@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/employee.css">
+    <link rel="stylesheet" href="../css/formEmployee.css">
+    <script type="text/javascript" src="../js/EmpForm/empForm.js"></script>
+    <script src="../js/bootstrap/bootstrap.bundle.js"></script>
+
+    <script type="text/javascript">
+            
+        function preventBack() {
+            window.history.forward(); 
+        }
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+    </script>
+    
+    <script></script>
+</head>
+
+<body>
+    <header>
+        <div class="head">
+            <div class="appName">
+                <h2>Travel Requestor</h2>
+            </div>
+
+            <div class="logout">
+                <img src="../images/person-circle.svg" alt="">
+                <a href="../pages/login-page.html">Logout</a>
+            </div>
+        </div>
+
+    </header>
+    <div class="nav-bar">
+        <div>
+            <div class="btn btn-dark" onclick="show('formContainer','')">Forms</div>
+            <div class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown">View Request</div>
+            <ul class="dropdown-menu">
+                <li><div class="dropdown-item" id="all" onclick="show('tableContainer',this.value)">All</div></li>
+                <li><a class="dropdown-item" id="critical">Critical</a></li>
+                <li><a class="dropdown-item" id="normal">Normal</a></li>
+                <li><a class="dropdown-item" id="rejected">Rejected</a></li>
+              </ul>
+        </div>
+
+    </div>
+
+    <div class="container" id="formContainer" style="display: none;">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="empid">EmpId</label>
+                    <input type="text" class="form-control" id="empid" placeholder="Employee Id">
+                </div>
+                <div class="col-md-6">
+                    <label for="empname">Employee Name</label>
+                    <input type="text" class="form-control" id="empname" placeholder="Employee Name">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="project">Project</label>
+                    <input type="text" class="form-control" id="project" placeholder="Project">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="cause">Cause For Travel</label>
+                    <input type="text" class="form-control" id="cause" placeholder="Cause">
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="source">Source</label>
+                    <input type="text" class="form-control" id="source" placeholder="Source">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="destination">Destination</label>
+                    <input type="text" class="form-control" id="destination" placeholder="Destination">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label for="fromdate">From Date</label>
+                    <input type="date" class="form-control" id="fromdate">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="noofdays">No Of Days</label>
+                    <input type="number" class="form-control" id="noofdays" min="1" max="30">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="todate">To Date</label>
+                    <input type="date" class="form-control" id="todate">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col">
+                    <label for="modeoftravel">Mode Of Travel</label>
+                    <input type="text" class="form-control" id="modeoftravel">
+                </div>
+            </div>
+            <div class="buttons">
+             
+                    <div>
+                        <button class="btn btn-dark">Add Request</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-dark">Clear</button>
+                    </div>
+        
+            </div>
+
+
+        </form>
+    </div>
+
+    <div class="container" id ="tempContainer"></div>
+
+    <div class="container" id="tableContainer" style="display: none;">
+        <table class="table table-bordered">
+            <thead class="table-dark">
+              <tr>
+                <td>Employee Name</td>
+                <td>Destination</td>
+                <td>Priority</td>
+                <td>View Details</td>
+              </tr>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Safdar</td>
+                    <td>COCHIN</td>
+                    <td>CRITICAL</td>
+                    <td><a class = "viewmore" href="#" onclick="show('travelCard')">View More</a></td>
+                </tr>
+             
+            </tbody>
+          </table>
+    </div>
+
+    <div class="card" id="travelCard" style="display: none;">
+        <div><h2>Travel Details</h2></div>
+        <hr>
+        <table>
+            <tr>
+                <td>
+                    <label for="empId">EmpID:</label>
+                     <span id="empId">123</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="empName">EmpID:</label>
+                     <span id="empName">Safdar</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="cause">Cause For Travel:</label>
+                     <span id="cause">Client Meeting</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="source">Source:</label>
+                     <span id="source">Kerala</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="destination">Destination:</label>
+                     <span id="destination">Japan</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="fromdate">From:</label>
+                     <span id="fromdate">01/01/2022</span>
+                     <label for="todate">to</label>
+                     <span id="todate">07/01/2022</span>
+                     <label for="noofdays"> for</label>
+                  <span id="noofdays">7</span> days
+                </td>
+                <tr>
+                    <td>
+                        <label for="modeoftravel">Requested mode of travel:</label>
+                         <span id="modeoftravel">Flight</span>
+                    </td>
+                </tr>
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="destination">Destination:</label>
+                     <span id="destination">Japan</span>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+
+
+</body>
+
+</html>

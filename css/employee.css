@@ -1,0 +1,53 @@
+.head{
+
+    padding: 1%;
+    display: flex;
+    background-color: black;
+    color: azure;
+    justify-content: space-between;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.head>div{
+    
+    padding: 1%;
+}
+
+.logout{
+
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(203, 203, 203);
+    font-size: 1em;
+}
+
+a:hover{
+
+    color: azure;
+}
+
+.nav-bar{
+
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+.nav-bar>div{
+    
+    display:flex;
+    justify-content: center;
+}
+
+.btn{
+    margin-left: 4%;
+    width: 150px;
+}
+
+
+

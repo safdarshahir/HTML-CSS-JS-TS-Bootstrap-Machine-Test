@@ -1,0 +1,44 @@
+#tempContainer{
+
+    padding: 5%;
+    margin-bottom: 2%;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.form-group{
+
+    padding: 1%;
+}
+
+.buttons{
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.buttons>div{
+    padding: 1%;
+}
+
+#tableContainer{
+
+    margin-top: 2%;
+
+}
+
+.viewmore{
+
+    color: black;
+}
+.viewmore:hover{
+
+    color: blue;
+}
+
+.card{
+    margin: 5%;
+    padding: 5%;
+    font-weight: 500;
+}
